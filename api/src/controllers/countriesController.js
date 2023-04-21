@@ -20,28 +20,26 @@ const getCountryById = async (id, source) => {
     const countries = source === "api" ?
     (await axios.get(`https://restcountries.com/v3.1/alpha/${id}`)).data 
     : await Country.findByPk(id);
-    console.log(id,source, "*");
     return cleanArray(countries);
 };
 const searchCountryByName = async (name) => {
     const response = await axios.get(`https://restcountries.com/v3.1/name/${name}`);
-    console.log(response, typeof response, "ZZZZ+**")
     return cleanArray(response.data);
 };
 
  const getAllCountries = async () =>{
     // buscar en la bdd
-    const databaseUsers = await Country.findAll();
+    const databaseCountries = await Country.findAll();
 
     // buscar en la api
-    const apiUserRaw = (
+    const apiCountryRaw = (
         await axios.get("https://restcountries.com/v3/all")
     ).data
-    const apiUsers = cleanArray(apiUserRaw);
+    const apiCountries = cleanArray(apiCountryRaw);
     // unificar 
-    return [...databaseUsers, ...apiUsers];
+    return [...databaseCountries, ...apiCountries];
 };
 
 
 
-module.exports = { getAllCountries, getCountryById, searchCountryByName}; //createUser
+module.exports = { getAllCountries, getCountryById, searchCountryByName}; 

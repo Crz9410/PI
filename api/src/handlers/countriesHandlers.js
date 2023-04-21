@@ -1,7 +1,7 @@
-const { createUser, getAllCountries, getCountryById, searchCountryByName } = require("../controllers/usersController");
-const axios = require ("axios");
+const {  getAllCountries, getCountryById, searchCountryByName } = require("../controllers/countriesController");
 
-const getUsersHandler = async (req, res) => {
+
+const getCountriesHandler = async (req, res) => {
     try {
         // Obtener el nombre del país de los parámetros de la URL 
         const { name } = req.query;
@@ -17,13 +17,13 @@ const getUsersHandler = async (req, res) => {
    
 };
 
-    const getUserHandler = async (req, res) => {
+    const getCountryHandler = async (req, res) => {
         const { id } = req.params;
         const source = isNaN(id) ? "api" : "bdd";
     
         try {
-            const user = await getCountryById(id, source);
-            res.status(200).json(user)
+            const country = await getCountryById(id, source);
+            res.status(200).json(country)
         } catch (error) {
             res.status(400).json({ error: error.message })
         }
@@ -36,7 +36,7 @@ const getUsersHandler = async (req, res) => {
 
 
 module.exports ={
-    getUsersHandler,
-    getUserHandler,
-    //createUserHandler
+    getCountryHandler,
+    getCountriesHandler,
+    
 };
