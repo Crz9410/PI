@@ -1,8 +1,7 @@
 const { Country } = require("../db");
 const axios = require ("axios");
 const { Op } = require('sequelize');
-// const createUser = async (nombre, id, imagen, continente, capital, subregion, area, poblacion) => 
-//  await Country.create({nombre, id, imagen, continente, capital, subregion, area, poblacion});
+
  
 const cleanArray = (arr) =>
 arr.map((elem)=>{

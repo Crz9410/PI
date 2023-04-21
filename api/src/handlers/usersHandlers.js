@@ -3,7 +3,7 @@ const axios = require ("axios");
 
 const getUsersHandler = async (req, res) => {
     try {
-        // Obtener el nombre del país de los parámetros de la URL
+        // Obtener el nombre del país de los parámetros de la URL 
         const { name } = req.query;
     
         // Hacer una petición GET al endpoint con el nombre del país
@@ -32,15 +32,7 @@ const getUsersHandler = async (req, res) => {
     
 
 
-// const createUserHandler = async (req, res) => {
-//     const { nombre, id, imagen, continente, capital, subregion, area, poblacion} = req.body
-//     try{
-//     const newUser = await createUser (nombre, id, imagen, continente, capital, subregion, area, poblacion);
-//     res.status(201).json(newUser)
-//     } catch (error){
-//         res.status(400).json({error: error.message});
-//     };
-//};
+
 
 
 module.exports ={
