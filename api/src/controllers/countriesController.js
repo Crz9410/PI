@@ -9,7 +9,7 @@ const cleanArray = (arr) =>
         return {
             id: elem.cca3,
             nombre: elem.name.common,
-            imagen: elem.flags[0].png,
+            imagen: elem.flags[0],
             continente: elem.continents[0],
             capital: elem.capital,
             subregion: elem.subregion,
