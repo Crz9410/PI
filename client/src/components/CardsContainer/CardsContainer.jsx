@@ -10,17 +10,17 @@ const CardsContainer = () => {
     return (
         <div className={Style.container}>
             {countries.map(country => {
-                // console.log(country,"ccc")
+                
                 return <Card
                 id={country.id}
-                    name={country.nombre}
-                    imagen={country.imagen}
-                    continente={country.continente}
+                    nombre={country.name.common}
+                    imagen={country.flags[0]}
+                    continente={country.continents[0]}
                     capital={country.capital}
                     subregion={country.subregion}
                     area={country.area}
-                    poblacion={country.poblacion}
-                    key={country.id}
+                    poblacion={country.population}
+                    key={country.cca3}
                 />
             })}
         </div>
