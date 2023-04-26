@@ -1,15 +1,16 @@
 import React from "react";
+import styles from './Card.module.css';
 const Card = (props) => {
-    console.log(props,)
+
     return (
-        <div key={props.id}>
-            <p>Name:{props.nombre}</p>
+        <div className={styles.card}  key={props.id}>
+            <p>Nombre:{props.nombre}</p>
             <img src={props.imagen} alt="Not found"/>
-            <p>continente:{props.continente}</p>
-            <p>capital:{props.capital}</p>
-            <p>subregion:{props.subregion}</p>
-            <p>area:{props.area}</p>
-            <p>poblacion:{props.poblacion}</p>
+            <p>Continente:{props.continente}</p>
+            <p>Capital:{props.capital}</p>
+            <p>Subregion:{props.subregion}</p>
+            <p>Area:{props.area}</p>
+            <p>Poblacion:{props.poblacion}</p>
             
         </div>
     )
