@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-image: url("https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepng.es%2Fpng-hj7l5h%2F&psig=AOvVaw2OSN9-hbvmWhZ4mnxEFkyK&ust=1682606954235000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCJC8sb_lx_4CFQAAAAAdAAAAABAW");
+  background-size: cover; /* ajusta la imagen al tamaño del contenedor */
   }
   
   h1 {

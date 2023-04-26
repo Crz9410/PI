@@ -4,6 +4,8 @@ export const GET_COUNTRY = "GET_COUNTRY";
 export const FILTER_BY_STATUS = "FILTER_BY_STATUS";
 export const FILTER_CREATED = "FILTER_CREATED";
 export const ORDER_BY_NAME = "ORDER_BY_NAME";
+export const GET_NAME_COUNTRY = "GET_NAME_COUNTRY";
+
 export const getCountries = () => async (dispatch) => {
     try {
         const apiData = await axios.get('https://restcountries.com/v3/all');
@@ -28,16 +30,28 @@ export function orderByName(payload) {
     }
 }
 
-
-export function filterCountriesByStatus(payload) {
-    return {
-        type: 'FILTER_BY_STATUS',
-        payload
+export function getNameCountry(nameCountry){ 
+    return async function (dispatch) {
+        try {
+            var json = await axios.get(`https://restcountries.com/v3.1/name/${nameCountry}` ); //`https://restcountries.com/v3.1/name/${name}`
+            return dispatch({
+                type: "GET_NAME_COUNTRY",
+                payload: json.data
+            })
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
-export function filterCreated(payload) {
-    return {
-        tyoe: 'FILTER_CREATED',
-        payload
+    export function filterCountriesByStatus(payload) {
+        return {
+            type: 'FILTER_BY_STATUS',
+            payload
+        }
     }
-}
+    export function filterCreated(payload) {
+        return {
+            tyoe: 'FILTER_CREATED',
+            payload
+        }
+    }

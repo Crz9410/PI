@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { filterCountriesByStatus, getCountries, filterCreated, orderByName, FILTER_BY_STATUS } from "../../redux/actions";
 import Paginado from "../../components/Paginado/Paginado";
 import styles from './Home.module.css';
+import SearchBar from "../../components/SearchBar/SearchBar";
 
 
 const Home = () => {
@@ -73,6 +74,7 @@ const Home = () => {
 
                 </select>
             </div>
+            <SearchBar/>
             <CardsContainer currentCountry={currentcountries} />
             <Paginado
                 setCurrentPage={setCurrentPage}
