@@ -1,7 +1,7 @@
 import CardsContainer from "../../components/CardsContainer/CardsContainer";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getCountries } from "../../redux/actions";
+import { filterCountriesByStatus, getCountries } from "../../redux/actions";
 import Paginado from "../../components/Paginado/Paginado";
 
 
@@ -15,7 +15,9 @@ const Home = () => {
     const indexOfFirstCountries = indexOfLastCountries - countriesPerPage
     const currentcountries = allCountries.slice(indexOfFirstCountries,indexOfLastCountries);
 
-
+    const handlerFilterContinet = (e)=>{
+        dispatch(filterCountriesByStatus(e.target.value))
+    }
     
 
 
@@ -34,9 +36,17 @@ const Home = () => {
                 <option value='ascendente'>Ascendente</option>
                 <option value='descendente'>Descendente</option>
             </select>
-            <select>
+            <select onChange={e=>handlerFilterContinet(e)}>
             {/* Botones/Opciones para ordenar tanto ascendentemente como descendentemente los países por orden alfabético y por cantidad de población. */}
+                {/* <option value="tipo">Tipo de actividades turisticas</option> */}
+                <option value="South America">Sur America</option>
+                <option value="Antarctica">Antartida</option>
+                <option value="Europe">Europa</option>
+                <option value="Oceania">Oceania</option> 
+                <option value="Africa">Africa</option> 
+                <option value="Asia">Asia</option>    
                 <option value="All">Todos</option> 
+                
             </select>
         </div>
         <Paginado
