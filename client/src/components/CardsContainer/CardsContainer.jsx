@@ -2,14 +2,14 @@ import Card from "../Card/Card";
 import Style from "./CardsContainer.module.css"
 import { useSelector } from "react-redux"
 
-const CardsContainer = () => {
+const CardsContainer = ({currentCountry}) => {
 
     const countries = useSelector(state=>state.countries)
 
 
     return (
         <div className={Style.container}>
-            {countries.map(country => {
+            {currentCountry.map(country => {
                 
                 return <Card
                 id={country.id}

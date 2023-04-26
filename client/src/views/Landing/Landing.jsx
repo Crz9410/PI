@@ -1,8 +1,15 @@
+import React from "react";
+import { Link } from 'react-router-dom';
+
+
 const Landing = () =>{
     return(
-        <>
-        <h1>Vista Landing</h1>
-        </>
+        <div>
+        <h1>Bíenvenidos a mi super página</h1>
+        <Link to ="/home">
+            <button>Ingresar</button>
+        </Link>
+        </div>
     )
 }
 
