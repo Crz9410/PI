@@ -5,7 +5,7 @@ import style from'./Landing.module.css';
 const Landing = () =>{
     return(
         <div className="landing-container">
-            <h1>Bienvenidos a mi super página</h1>
+            <h1>Bienvenidos a la APP Country</h1>
             <div className="button-container">
                 <Link to ="/home">
                     <button>Ingresar</button>

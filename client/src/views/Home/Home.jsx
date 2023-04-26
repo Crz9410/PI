@@ -63,12 +63,12 @@ const Home = () => {
                     <option value="Asia">Asia</option>
                     <option value="All">Todos</option>
                 </select>
-                <select className={styles.created} onChange={e => handlerFilterCreated(e)}>
+                {/* <select className={styles.created} onChange={e => handlerFilterCreated(e)}>
                     <option value='All'>Todos</option>
                     <option value='created'>Creados</option>
                     <option value='api'>Existentes</option>
-                </select>
-                <select onChange={e => handlerSort(e)}>
+                </select> */}
+                <select className={styles.continent} onChange={e => handlerSort(e)}>
                     <option value='asc'>A-Z</option>
                     <option value='des'>Z-A</option>
 

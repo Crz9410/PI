@@ -37,6 +37,7 @@ body {
   .continent {
     background-color: #3498db;
     color: #fff;
+    margin: 10px;
   }
   
   .cards-container {
@@ -90,3 +91,5 @@ body {
   .paginado button:hover {
     background-color: #2980b9;
   }
+  
+  
