@@ -50,11 +50,8 @@ const Home = () => {
                 <h1> Home</h1>
 
             </div>
-            <div>
-
+            <div className={styles.filter} >
                 <select className={styles.continent} onChange={e => handlerFilterContinet(e)}>
-                    {/* Botones/Opciones para ordenar tanto ascendentemente como descendentemente los países por orden alfabético y por cantidad de población. */}
-                    {/* <option value="tipo">Tipo de actividades turisticas</option> */}
                     <option value="South America">Sur America</option>
                     <option value="Antarctica">Antartida</option>
                     <option value="Europe">Europa</option>
@@ -63,18 +60,14 @@ const Home = () => {
                     <option value="Asia">Asia</option>
                     <option value="All">Todos</option>
                 </select>
-                {/* <select className={styles.created} onChange={e => handlerFilterCreated(e)}>
-                    <option value='All'>Todos</option>
-                    <option value='created'>Creados</option>
-                    <option value='api'>Existentes</option>
-                </select> */}
+
+                <SearchBar />
                 <select className={styles.continent} onChange={e => handlerSort(e)}>
                     <option value='asc'>A-Z</option>
                     <option value='des'>Z-A</option>
 
                 </select>
             </div>
-            <SearchBar/>
             <CardsContainer currentCountry={currentcountries} />
             <Paginado
                 setCurrentPage={setCurrentPage}

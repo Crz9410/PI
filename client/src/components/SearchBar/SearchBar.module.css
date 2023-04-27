@@ -1,34 +1,30 @@
-.landing-container {
+.search_container {
     display: flex;
     align-items: center;
   }
   
-  .landing-container input[type="text"] {
+  .search_container input[type="text"] {
     width: 200px;
-    height: 25px;
-    border: none;
-    border-radius: 4px;
     padding: 6px;
-    font-size: 16px;
+    font-size: 12px;
     margin-right: 10px;
-  }
+}
   
-  .landing-container button[type="submit"] {
-    background-color: #007bff;
+  .search_container button[type="submit"]:hover {
+    background-color: #096aa9;
+    
+  }
+  .search_container button[type="submit"] {
+    display: flex;
+    font-size: 12px;
+    padding: 10px;
+    width: 90px;
+    background-color: #102944;
     color: white;
     border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: 16px;
+    border-radius: 20px;
     cursor: pointer;
-  }
-  
-  .landing-container button[type="submit"]:hover {
-    background-color: #0062cc;
-  }
-  button{
-    padding: 10px !important;
-    font-size: 15px !important;
-    max-width: 150px !important;
-    max-height: 40px !important;
+    align-items: center;
+    justify-content: center;
+    
   }
