@@ -5,8 +5,10 @@ import style from './NavBar.module.css';
 const NavBar = () => {
     return (
         <div className={style.mainContainer}>
-            <Link to="/home">HOME</Link>
-            <Link to="/create">FORM</Link>
+            <Link to="/">Página principal</Link>
+            <Link to="/home">Paises</Link>
+            <Link to="/create">Actividades</Link>
+
         </div>
     )
 };

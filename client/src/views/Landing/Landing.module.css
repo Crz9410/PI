@@ -15,6 +15,9 @@
     font-size: 3rem;
     background-color:  #102944;
     width: 100%;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
   }
   
   .button_container {

@@ -46,10 +46,6 @@ const Home = () => {
 
     return (
         <>
-            <div className={styles.title}>
-                <h1> Home</h1>
-
-            </div>
             <div className={styles.filter} >
                 <select className={styles.continent} onChange={e => handlerFilterContinet(e)}>
                     <option value="South America">Sur America</option>
@@ -67,6 +63,10 @@ const Home = () => {
                     <option value='des'>Z-A</option>
 
                 </select>
+            </div>
+            <div className={styles.title}>
+                <h1>Paises</h1>
+
             </div>
             <CardsContainer currentCountry={currentcountries} />
             <Paginado
