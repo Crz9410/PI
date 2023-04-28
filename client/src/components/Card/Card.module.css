@@ -1,4 +1,4 @@
-.card {
+.boxesContainer {
   width: 95%;
   padding: 10px;
   margin-bottom: 2%;
@@ -9,9 +9,57 @@
   display: flex;
   flex-direction: column;
   min-width: 200px;
-  min-height: 320px;
+  min-height: 250px;
   max-width: 200px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  max-width: 200px;
+}
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transition: all 0.4s ease-in-out;
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   
+}
+
+.front {
+  z-index: 2;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.cardBox:hover .front {
+  opacity: 0;
+}
+
+.cardBox:hover .back {
+  opacity: 1;
 }
 
 .card img {
@@ -19,16 +67,16 @@
   height: 120px;
   object-fit: cover;
   margin: 10px 0;
-
+  max-width: 200px;
 }
 
 .card-content {
-
   display: flex;
   flex-direction: column;
+  
 }
 
-.card p {
+.boxesContainer p {
   margin: 5px;
   font-size: 15px;
 }
@@ -38,3 +86,56 @@
   font-weight: 600;
   justify-content: center;
 }
+
+.cardBox {
+  float: left;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 200px;
+  height: 250px;
+  margin: 10px;
+  position: relative;
+}
+/* .cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+
+.cardBox:hover .card .front {
+  opacity: 0;
+} */
+/* .card {
+  background: #222;
+  cursor: default;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease 0s;
+  width: 100%;
+  -webkit-animation: giro 1s 1;
+  animation: giro 1s 1;
+}
+.front, .back {
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  height: 100%;
+  padding: 0.8em;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.back {
+  transform: rotateY( 180deg);
+}
+.cardBox:hover .card {
+  transform: rotateY(180deg);
+}
+.cardBox {
+  float: left;
+  font-size: 1.2em;
+  margin: 1% 0 0 1%;
+  perspective: 800px;
+  transition: all 0.3s ease 0s;
+  width: 23.7%;
+} */

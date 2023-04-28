@@ -17,15 +17,16 @@ const CardsContainer = ({ currentCountry }) => {
                         <Card
 
                             id={country.id}
-                            nombre={country.name.common}
-                            imagen={country.flags[0]}
-                            continente={country.continents[0]}
-                            capital={country.capital}
-                            subregion={country.subregion}
-                            area={country.area}
-                            poblacion={country.population}
+                            nombre={country.name.common || "No hay informacion"}
+                            imagen={country.flags[0] || "No hay informacion"}
+                            continente={country.continents[0] || "No hay informacion"}
+                            capital={country.capital || "No hay informacion"}
+                            subregion={country.subregion || "No hay informacion"}
+                            area={country.area || "No hay informacion"}
+                            poblacion={country.population || "No hay informacion"}
 
                         />
+                        
                     </div>
                 )
 
