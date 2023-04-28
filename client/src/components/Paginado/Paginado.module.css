@@ -13,9 +13,10 @@
   .paginado a {
     text-decoration: none;
     border-bottom: none;
-    color: blue;
+    color: #102944;
+    font-style: italic;
   }
   
   .paginado a:hover {
-    color: red;
+    color: #08b4ff;
   }

@@ -4,7 +4,7 @@ const Card = (props) => {
 
     return (
         <div className={styles.card}  key={props.id}>
-            <p>Nombre:{props.nombre}</p>
+            <p className={styles.country} >{props.nombre}</p>
             <img src={props.imagen} alt="Not found"/>
             <p>Continente:{props.continente}</p>
             <p>Capital:{props.capital}</p>
